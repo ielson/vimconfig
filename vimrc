@@ -1,4 +1,20 @@
 " meu vimrc sinistro
+set nocompatible
+filetype off
+
+" configurações do Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ycm-core/YouCompleteMe'
+
+
+call vundle#end()
+filetype plugin indent on
+
+" faz o ycm fechar a janela de preview depois de usada
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " tabs e espaços
 set autoindent " novas linhas vão ter a mesma indentação da linha atual
@@ -19,7 +35,7 @@ set wildmenu " as opções do tab aparecem num menu suspenso
 set number " mostra o num de cada linha na lateral esquerda
 set relativenumber " acho que é muito bom, mostra o numero das linhas relativo ao que estamos, bom pra os movimentos
 set showcmd " mostra comandos incompletos no rodapé
-set confirm " não dá erro quando não colocamos pra salvar o arquivo e sim pergunta se queremos
+set confirm " pergunta se queremos salvar um arquivo
 
 " opções de texto
 set linebreak " nao quebra palavras no meio
